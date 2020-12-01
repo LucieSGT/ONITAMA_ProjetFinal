@@ -11,4 +11,11 @@ package projetonitama_sarinena_forssant;
  */
 public class Carte {
     
+    String NomCarte;
+    int Matrice[][] = new int[5][5];
+
+public Carte (String unNom) { // constructeur qui passe le nom en paramètre et initialise les attributs
+    NomCarte = unNom;
+}  
+       
 }

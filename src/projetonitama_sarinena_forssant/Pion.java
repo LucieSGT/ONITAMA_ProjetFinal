@@ -11,4 +11,12 @@ package projetonitama_sarinena_forssant;
  */
 public class Pion {
     
+    String CouleurPion;
+    String Role;
+    
+public Pion (String uneCouleurPion, String unRole) { // constructeur qui passe le nom en paramètre et initialise les attributs
+    CouleurPion = uneCouleurPion;
+    Role = unRole;
+} 
+    
 }
