@@ -32,8 +32,8 @@ void initialiserPartie() {
     // Afficher la grille
     
     
-        PlateauJeu.viderPlateau(); // initialisation de la grille
-
+        PlateauJeu.ViderPlateau(); // initialisation de la grille
+        // BD : corrigé avec un V majuscule
         Scanner sc = new Scanner(System.in);
         System.out.println("Entrez le nom du Joueur 1 : ");
         Joueur Joueur1 = new Joueur(sc.nextLine()); // création des deux objets joueur
@@ -49,7 +49,8 @@ void initialiserPartie() {
         System.out.println(Joueur2.NomJoueur + " possède les jetons de couleur " + Joueur2.CouleurJoueur);
 
         PlateauJeu.AfficherPlateauSurConsole(); // affichage du jeu initialisé sur la console
-    }
+        // BD : methode non présente
+}
     
 // méthode débuter partie ?
 
@@ -68,6 +69,9 @@ void AttribuerCouleursAuxJoueurs() {
 
 Carte SelectionCartePartie(){
     // tirage aléatoire de 5 cartes parmi les 16 et les renvoie
+    
+   // BD : ou sont stockées les 16 cartes au début ?
+   // BD : conseil : commencer par les créer. Ce sont des objets simples. 
     return uneCarte;
 }
 
@@ -93,6 +97,7 @@ boolean Tour() { // équivalent de notre méthode Menu() achevée
 }
 
 void CouleurSuivante() { // changement de joueur
+    // BD : joueur suivant
         if (ListeJoueurs[0] == JoueurCourant) {
             JoueurCourant = ListeJoueurs[1];
         } else {
@@ -102,12 +107,14 @@ void CouleurSuivante() { // changement de joueur
 
 Carte CarteAJouer(){
     // renvoyer les cartes que le joueur peut utiliser (seulement 2)
+    // BD : pas compris cette méthode, on renvoie quelle carte? 
     return uneCarte;
 }
 
 Carte EchangeCarte(){
     // la dernière carte jouée devient carte transition
     // changement de main, ajout de la 3e carte à l'autre joueur
+    // BD: je vois a peu pres cette méthode. Ne pas oublier qu'il faudra, uen fois les cartes échangées, raffecter carteCourante comme une carte appartenant au joueur courant
     return uneCarte;
 }
 

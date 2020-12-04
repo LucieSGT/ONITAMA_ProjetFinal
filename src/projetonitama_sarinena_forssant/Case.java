@@ -55,6 +55,9 @@ boolean SupprimerPion(){ //supprime le pion de la case
 //utilisée quand un pion arrive sur une case où un autre est deja present
 
 boolean RemplacerPion(){ // en suspens
+    // BD : s'il s'agit de remplacer le pion présent, il faut que le pion remplacant soit en paramètre
+    // autre chose : que fait-on du pion premplacé? on le dégage ? on le récupère poru le stocker ailleurs?
+    // (il n'y a pas une bonne et une mauvaise réponse, tout dépend
     return true;
 }
 
