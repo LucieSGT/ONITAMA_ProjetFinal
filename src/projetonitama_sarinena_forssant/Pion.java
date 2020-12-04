@@ -18,5 +18,13 @@ public Pion (String uneCouleurPion, String unRole) { // constructeur qui passe l
     CouleurPion = uneCouleurPion;
     Role = unRole;
 } 
+
+String LireCouleurPion(){ //retourne la couleur du pion
+    return CouleurPion;
+}
+
+String LireRole(){ //retourne le role du pion (pion simple ou roi)
+    return Role;
+}
     
 }

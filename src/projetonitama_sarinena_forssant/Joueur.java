@@ -14,7 +14,7 @@ public class Joueur {
     String NomJoueur;
     String CouleurJoueur;
     Carte CarteEnMain[] = new Carte[3];
-    Carte CarteCourante
+    Carte CarteCourante;
     int NbreCartes;
     
     
@@ -27,13 +27,16 @@ void AffecterCouleur (String uneCouleurJoueur){ // affecte la couleur en paramè
     CouleurJoueur = uneCouleurJoueur ;
 }
 
-void AjouterCarte(Carte unNomCarte){
+void AjouterCarte(Carte unNomCarte){ //ajoute les cartes au joueur +1 au plateau
     CarteEnMain[NbreCartes++] = unNomCarte;
 }
 
 String CouleurDuJoueur(){ // création de cette méthode pour récupérer la couleur dans la classe grille
     return CouleurJoueur;
 }
+
+// le joueur joue la carte selectionnee
+//la carte va ensuite être mechngée avec celle qui etait au bord du plateau
 
 boolean UtiliserCarte (Carte NomCarte){
    return true;

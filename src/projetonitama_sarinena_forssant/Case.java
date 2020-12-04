@@ -14,12 +14,12 @@ public class Case {
     Pion PionCourant;
     boolean CaseGrise;
     
-public Case () {
+public Case () { // constructeur qui initialise les attributs
     PionCourant = null;
     CaseGrise = false;
 } 
 
-boolean AffecterPion(Pion unPion){
+boolean AffecterPion(Pion unPion){ //affecte le pion à une case suite à un mouvement
     if (PionCourant == null){
        PionCourant = unPion; 
        //System.out.println("pion affecté");
@@ -31,7 +31,7 @@ boolean AffecterPion(Pion unPion){
     }
 }
 
-String LireCouleurDuPion(){
+String LireCouleurDuPion(){ //retourne la couleur du pion joué
     if (PionCourant == null){
         return "vide";
     }
@@ -40,7 +40,7 @@ String LireCouleurDuPion(){
     }
 }
 
-boolean SupprimerPion(){
+boolean SupprimerPion(){ //supprime le pion de la case 
     if(PionCourant==null){
         //System.out.println("Case vide");
         return false;
@@ -51,6 +51,8 @@ boolean SupprimerPion(){
         return true;
     }
 }
+// methode alliant AffecterPion() et SupprimerPion()
+//utilisée quand un pion arrive sur une case où un autre est deja present
 
 boolean RemplacerPion(){ // en suspens
     return true;

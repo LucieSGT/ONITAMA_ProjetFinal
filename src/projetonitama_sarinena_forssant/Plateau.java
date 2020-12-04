@@ -20,6 +20,51 @@ public class Plateau {
             }
         }
     }
-
+ boolean AjouterPion(){ // ajoute les 10 jetons sur le plateau, disposés d'une certaine manière
+     return true;
+ } 
+ 
+ void ViderPlateau(){ //vide le plateau en fin de partie
+     
+ }
+ 
+ boolean CaseOccupee(){ //renvoie si la case est occupée par un pion (adverse ou non)
+     return true;
+ }
+ 
+ String LireCouleurPion(){ // renvoie la couleur du pion 
+     return null;
+ }
+ 
+ //methode alliant AjouterPion et SupprimerPion
+ // utilisée lors de la capture d'un pion adverse
+ boolean RemplacerPion(){ 
+     return true;
+ }
+ 
+ boolean SupprimerPion(){ // supprime le pion du plateau
+     return true;
+ }
+ 
+ //methode alliant ConditionPierre et ConditionRuisseau
+ String EtreGagnant(){
+     return null;
+ }
+ 
+ boolean ConditionPierre(){ //condition 1 pour gagner
+     return true;
+ }
+ 
+ boolean ConditionRuisseau(){ // condition 2 pour gagner
+     return true;
+ }
+ 
+ 
+ // cases grises -> visualiser les potentiels mouvements de pions avec les cartes en main
+ void PlacerCaseGrise(){
+     
+ }
+ 
+ //+Dragons... (16)
     
 }
