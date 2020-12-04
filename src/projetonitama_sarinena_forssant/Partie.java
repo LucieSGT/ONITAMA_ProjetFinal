@@ -108,6 +108,7 @@ Carte CarteAJouer(){
 Carte EchangeCarte(){
     // la dernière carte jouée devient carte transition
     // changement de main, ajout de la 3e carte à l'autre joueur
+    return uneCarte;
 }
 
 }
