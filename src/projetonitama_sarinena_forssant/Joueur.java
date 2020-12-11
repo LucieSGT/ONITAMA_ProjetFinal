@@ -13,25 +13,18 @@ public class Joueur {
     
     String NomJoueur;
     String CouleurJoueur;
-    Carte CarteEnMain[] = new Carte[3];
-    // BD : seulement 2 cartes en main pour un joueur
+    Carte CarteEnMain[] = new Carte[2];
+    // BD : seulement 2 cartes en main pour un joueur OK
     Carte CarteCourante;
-    // BD : carte courante c'est bien la carte qu'il s'apprete à jouer ?
-    int NbreCartes;
-    // BD : je ne comprends pas vraiment le NbreCartes. Il en a toujours 2 non ? (sauf au dévbut de la partie s'il en tire une puis lm'autre, mais ca reste pas pertinent à stocker
-    // BD : edit : je l'ai compris avec AjouterCarte
+    // BD : carte courante c'est bien la carte qu'il s'apprete à jouer ? OUI
+
     
 public Joueur (String unNomJoueur) { // constructeur qui passe le nom en paramètre et initialise les attributs
     NomJoueur = unNomJoueur;
-    NbreCartes = 0;
 }  
 
 void AffecterCouleur (String uneCouleurJoueur){ // affecte la couleur en paramètre au joueur
     CouleurJoueur = uneCouleurJoueur ;
-}
-
-void AjouterCarte(Carte unNomCarte){ //ajoute les cartes au joueur +1 au plateau
-    CarteEnMain[NbreCartes++] = unNomCarte;
 }
 
 String CouleurDuJoueur(){ // création de cette méthode pour récupérer la couleur dans la classe grille

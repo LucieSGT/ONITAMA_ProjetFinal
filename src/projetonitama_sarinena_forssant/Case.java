@@ -13,10 +13,12 @@ public class Case {
     
     Pion PionCourant;
     boolean CaseGrise;
+    boolean EstRoi;
     
 public Case () { // constructeur qui initialise les attributs
     PionCourant = null;
     CaseGrise = false;
+    EstRoi = false;
 } 
 
 boolean AffecterPion(Pion unPion){ //affecte le pion à une case suite à un mouvement
@@ -39,6 +41,30 @@ String LireCouleurDuPion(){ //retourne la couleur du pion joué
         return PionCourant.CouleurPion;
     }
 }
+
+boolean presenceRoi(){
+    if (EstRoi == true){
+        //System.out.println("Désintégrateur présent");
+        return true;
+    }
+    else {
+        //System.out.println("Désintégrateur absent");
+        return false;
+    }
+}
+
+boolean presenceCaseGrise(){
+    if (CaseGrise == true){
+        //System.out.println("Désintégrateur présent");
+        return true;
+    }
+    else {
+        //System.out.println("Désintégrateur absent");
+        return false;
+    }
+}
+
+
 
 boolean SupprimerPion(){ //supprime le pion de la case 
     if(PionCourant==null){

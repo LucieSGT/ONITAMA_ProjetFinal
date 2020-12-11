@@ -31,7 +31,6 @@ void initialiserPartie() {
     // Placer Pions
     // Afficher la grille
     
-    
         PlateauJeu.ViderPlateau(); // initialisation de la grille
         // BD : corrigé avec un V majuscule
         Scanner sc = new Scanner(System.in);
@@ -105,11 +104,11 @@ void CouleurSuivante() { // changement de joueur
         }
 }
 
-Carte CarteAJouer(){
+/*Carte CarteAJouer(){
     // renvoyer les cartes que le joueur peut utiliser (seulement 2)
     // BD : pas compris cette méthode, on renvoie quelle carte? 
     return uneCarte;
-}
+}*/
 
 Carte EchangeCarte(){
     // la dernière carte jouée devient carte transition

@@ -10,21 +10,27 @@ package projetonitama_sarinena_forssant;
  * @author lucie
  */
 public class Pion {
-    
+
     String CouleurPion;
-    String Role;
-    // BD : ok pour Role. On pouvait aussi le gérer en tant que boolean, ou rajouter une méthode etreRoi
-public Pion (String uneCouleurPion, String unRole) { // constructeur qui passe le nom en paramètre et initialise les attributs
-    CouleurPion = uneCouleurPion;
-    Role = unRole;
-} 
+    boolean Roi; // BD : ok pour Role. On pouvait aussi le gérer en tant que boolean, ou rajouter une méthode etreRoi OK
 
-String LireCouleurPion(){ //retourne la couleur du pion
-    return CouleurPion;
-}
+    public Pion(String uneCouleurPion) { // constructeur qui passe le nom en paramètre et initialise les attributs
+        CouleurPion = uneCouleurPion;
+        Roi = false;
+    }
 
-String LireRole(){ //retourne le role du pion (pion simple ou roi)
-    return Role;
-}
-    
+    String LireCouleurPion() { //retourne la couleur du pion
+        return CouleurPion;
+    }
+
+    boolean EtreRoi() { //retourne le role du pion (pion simple ou roi)
+        if (Roi == true) {
+            //System.out.println("Roi présent");
+            return true;
+        } else {
+            //System.out.println("Roi absent");
+            return false;
+        }
+    }
+
 }
