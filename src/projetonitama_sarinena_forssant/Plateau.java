@@ -143,21 +143,28 @@ public class Plateau {
     int[][] Cobra = {{1, 2}, {3, 1}, {3, 3}};
     Carte CarteCobra = new Carte("Cobra", "Rouge", Cobra);
         
-    int [][] Tigre = {{2,1},{2,4}};
-
-        /*Carte CarteTigre = new Carte ("Tigre","Bleu", Tigre);
-        int [][] Dragon = {​​{​​0;3}​​, {​​1,1}​​, {​​3,1}​​, {​​4,3}​​}​​; 
-        Carte CarteDragon = new Carte (« Dragon », « Rouge », Dragon);
-        int [][] Grenouille  = {​​{​​0;2}​​, {​​1,3}​​,{​​3,1}​​}​​; 
-        Carte CarteGrenouille = new Carte (« Grenouille », « Bleu », Grenouille);
-        int [][] Lapin = {​​{​​1;1}​​, {​​3,3}​​, {​​4,2}​​}​​; 
-        Carte CarteLapin = new Carte (« Lapin », « Bleu», Lapin);
-        int [][] Crabe = {​​{​​0;2}​​, {​​2,3}​​, {​​2,2}​​}​​; 
-        Carte CarteCrabe = new Carte (« Crabe », « Bleu », Crabe);
-        int [][] Elephant = {​​{​​1;2}​​, {​​1,3}​​, {​​3,2}​​, {​​3,3}​​}​​; 
-        Carte CarteElephant = new Carte (« Elephant », « Rouge », Elephant);
-        int [][] Oie = {​​{​​1;2}​​, {​​1,3}​​, {​​2,1}​​, {​​3,2}​​}​​; 
-        Carte CarteOie = new Carte (« Oie », « Bleu », Oie);
-        int [][] Coq = {​​{​​1;1}​​, {​​1,2}​​,{​​3,2}​​ ,{​​3,3}​​}​​; 
-        Carte CarteCoq = new Carte (« Coq », « Rouge », Coq);*/
+    int [][] Tigre = {{2, 1}, {2, 4}};
+    Carte CarteTigre = new Carte ("Tigre", "Bleu", Tigre);
+    
+    int[][] Dragon = {{0, 3}, {1, 1}, {3, 1}, {4, 3}};
+    Carte CarteDragon = new Carte ("Dragon" , "Rouge" , Dragon);
+    
+    int[][] Grenouille = {{0, 2}, {1, 3}, {3, 1}};
+    Carte CarteGrenouille = new Carte ("Grenouille", "Bleu", Grenouille);
+    
+    int[][] Lapin = {{1, 1}, {3, 3}, {4, 2}};
+    Carte CarteLapin = new Carte("Lapin", "Bleu", Lapin);
+    
+    int[][] Crabe = {{0, 2}, {2, 3}, {2, 2}};
+    Carte CarteCrabe = new Carte("Crabe", "Bleu", Crabe);
+    
+    int[][] Elephant = {{1, 2}, {1, 3}, {3, 2}, {3, 3}};
+    Carte CarteElephant = new Carte("Elephant", "Rouge", Elephant);
+    
+    int[][] Oie = {{1, 2}, {1, 3}, {2, 1},{3, 2}};
+    Carte CarteOie = new Carte("Oie", "Bleu", Oie);
+    
+    int[][] Coq = {{1, 1}, {1, 2}, {3, 2}, {3, 3}};
+    Carte CarteCoq = new Carte("Coq", "Rouge", Coq);
+    
 }
