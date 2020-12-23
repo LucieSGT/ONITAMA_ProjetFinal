@@ -49,45 +49,59 @@ public class Plateau {
 
 //methode alliant AjouterPion et SupprimerPion
 // utilisée lors de la capture d'un pion adverse
-    boolean RemplacerPion(int l, int c, Pion unPion){
+    boolean RemplacerPion(int l, int c, Pion unPion) {
         // BD : remplacer le pion de quelle case, par quoi ? manque coords et le nouveau pion OK
-        if (Grille[l][c].PionCourant == null){
+        if (Grille[l][c].PionCourant == null) {
             return false;
         }
-        if (Grille[l][c].PionCourant.CouleurPion == unPion.CouleurPion){
+        if (Grille[l][c].PionCourant.CouleurPion == unPion.CouleurPion) {
             return false;
-        }
-        else {
-        unPion = Grille[l][c].PionCourant;
-        return true;
+        } else {
+            unPion = Grille[l][c].PionCourant;
+            return true;
         }
     }
-    
 
     boolean SupprimerPion(int l, int c) { // supprime le pion du plateau
-        if(Grille[l][c].PionCourant==null){ // vérifie que case soit non vide
-        //System.out.println("Case vide");
-        return false;
-    }
-    else{
-        Grille[l][c].PionCourant=null; 
-        //System.out.println("Suppression du jeton effectuée");
-        return true;
-    }       
+        if (Grille[l][c].PionCourant == null) { // vérifie que case soit non vide
+            //System.out.println("Case vide");
+            return false;
+        } else {
+            Grille[l][c].PionCourant = null;
+            //System.out.println("Suppression du jeton effectuée");
+            return true;
+        }
 // BD : sur quelle case on supprime le pion ?
     }
 
     //methode alliant ConditionPierre et ConditionRuisseau
-    String EtreGagnant() {
+    String EtreGagnant(Joueur unNom) {      
         return null;
     }
 
-    boolean ConditionPierre() { //condition 1 pour gagner
-        return true;
+    boolean ConditionPierre(int l, int c, Pion unPion) { //condition 1 pour gagner
+        if (Grille[l][c].PionCourant.CouleurPion != unPion.CouleurPion && unPion.EtreRoi() == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    boolean ConditionRuisseau() { // condition 2 pour gagner
-        return true;
+    boolean ConditionRuisseau(int l, int c) { // condition 2 pour gagner
+        if (Grille[l][c].PionCourant.EtreRoi() == true && Grille[l][c].PionCourant.CouleurPion == "Bleu") {
+            if (l == 0 && c == 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (Grille[l][c].PionCourant.EtreRoi() == true && Grille[l][c].PionCourant.CouleurPion == "Rouge") {
+            if (l == 4 && c == 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     void AfficherPlateauSurConsole() {
@@ -114,6 +128,7 @@ public class Plateau {
 
     // cases grises -> visualiser les potentiels mouvements de pions avec les cartes en main
     void PlacerCaseGrise(int l, int c, Carte uneCarte) {
+        
         // BD : on place les case grises à partir d'un pion choisi par ses coordonnées, et d'une carte, non ? OK
         // ou sont ces éléments quand on appelle cette méthode ? DANS CETTE CLASSE
 
@@ -142,29 +157,29 @@ public class Plateau {
 
     int[][] Cobra = {{1, 2}, {3, 1}, {3, 3}};
     Carte CarteCobra = new Carte("Cobra", "Rouge", Cobra);
-        
-    int [][] Tigre = {{2, 1}, {2, 4}};
-    Carte CarteTigre = new Carte ("Tigre", "Bleu", Tigre);
-    
+
+    int[][] Tigre = {{2, 1}, {2, 4}};
+    Carte CarteTigre = new Carte("Tigre", "Bleu", Tigre);
+
     int[][] Dragon = {{0, 3}, {1, 1}, {3, 1}, {4, 3}};
-    Carte CarteDragon = new Carte ("Dragon" , "Rouge" , Dragon);
-    
+    Carte CarteDragon = new Carte("Dragon", "Rouge", Dragon);
+
     int[][] Grenouille = {{0, 2}, {1, 3}, {3, 1}};
-    Carte CarteGrenouille = new Carte ("Grenouille", "Bleu", Grenouille);
-    
+    Carte CarteGrenouille = new Carte("Grenouille", "Bleu", Grenouille);
+
     int[][] Lapin = {{1, 1}, {3, 3}, {4, 2}};
     Carte CarteLapin = new Carte("Lapin", "Bleu", Lapin);
-    
+
     int[][] Crabe = {{0, 2}, {2, 3}, {2, 2}};
     Carte CarteCrabe = new Carte("Crabe", "Bleu", Crabe);
-    
+
     int[][] Elephant = {{1, 2}, {1, 3}, {3, 2}, {3, 3}};
     Carte CarteElephant = new Carte("Elephant", "Rouge", Elephant);
-    
-    int[][] Oie = {{1, 2}, {1, 3}, {2, 1},{3, 2}};
+
+    int[][] Oie = {{1, 2}, {1, 3}, {2, 1}, {3, 2}};
     Carte CarteOie = new Carte("Oie", "Bleu", Oie);
-    
+
     int[][] Coq = {{1, 1}, {1, 2}, {3, 2}, {3, 3}};
     Carte CarteCoq = new Carte("Coq", "Rouge", Coq);
-    
+
 }

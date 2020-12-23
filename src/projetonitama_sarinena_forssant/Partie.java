@@ -28,7 +28,7 @@ void initialiserPartie() {
     // Attribution des couleurs
     // Attribution des cartes
     // Création et attribution CarteTransition (qui commence ?)
-    // Placer Pions
+    // Placer Pions (Rouge en bas/bleu en haut)
     // Afficher la grille
     
         PlateauJeu.ViderPlateau(); // initialisation de la grille
@@ -69,8 +69,8 @@ void AttribuerCouleursAuxJoueurs() {
 Carte SelectionCartePartie(){
     // tirage aléatoire de 5 cartes parmi les 16 et les renvoie
     
-   // BD : ou sont stockées les 16 cartes au début ?
-   // BD : conseil : commencer par les créer. Ce sont des objets simples. 
+   // BD : ou sont stockées les 16 cartes au début ? DANS LA CLASSE PLATEAU.
+   // BD : conseil : commencer par les créer. Ce sont des objets simples. OK
     return uneCarte;
 }
 

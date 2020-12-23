@@ -27,7 +27,7 @@ boolean AffecterPion(Pion unPion){ //affecte le pion à une case suite à un mou
        //System.out.println("pion affecté");
         return true;
     }
-    else {
+    else{
       //System.out.println("Un pion est déjà présent"); 
       return false;
     }
@@ -80,7 +80,7 @@ boolean SupprimerPion(){ //supprime le pion de la case
 // methode alliant AffecterPion() et SupprimerPion()
 //utilisée quand un pion arrive sur une case où un autre est deja present
 
-boolean RemplacerPion(){ // en suspens
+boolean RemplacerPion(){ // en suspens (Normalement pas la peine de la faire exister)
     // BD : s'il s'agit de remplacer le pion présent, il faut que le pion remplacant soit en paramètre
     // autre chose : que fait-on du pion premplacé? on le dégage ? on le récupère poru le stocker ailleurs?
     // (il n'y a pas une bonne et une mauvaise réponse, tout dépend

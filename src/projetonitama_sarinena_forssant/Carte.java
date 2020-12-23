@@ -32,9 +32,9 @@ String LireCarte(){ //Retourne au joueur le nom de la carte
    return NomCarte;
 }
 
-String MouvementPossible(String unNom){ //retourne au joueur une matrice 5x5 avec l'action qu'il peut jouer
+/*String MouvementPossible(String unNom){ //retourne au joueur une matrice 5x5 avec l'action qu'il peut jouer (Elle sert encore ?)
 // BD : manque un vecteur en paramètre désignant le mouvement
     return null;
-}
+}*/
        
 }
