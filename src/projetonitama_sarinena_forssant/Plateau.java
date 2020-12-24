@@ -22,8 +22,12 @@ public class Plateau {
     }
 
     boolean PositionnerPionsDepart() { // ajoute les 10 jetons sur le plateau, disposés d'une certaine manière
+        for (int i=0; i<5; i++){
+            Grille[0][i].PionCourant = Grille[0][i].PionCourant;
+        }
         return true;
     }
+   
 
     void ViderPlateau() { //vide le plateau en fin de partie // parcours la grille et initialise les données à 0 pour toutes les cellules, les trou noirs et les desintegrateurs
         for (int l = 0; l < 5; l++) {
@@ -49,7 +53,7 @@ public class Plateau {
 
 //methode alliant AjouterPion et SupprimerPion
 // utilisée lors de la capture d'un pion adverse
-    boolean RemplacerPion(int l, int c, Pion unPion) {
+    boolean RemplacerPion(int l, int c, Pion unPion) { // attention aux références
         // BD : remplacer le pion de quelle case, par quoi ? manque coords et le nouveau pion OK
         if (Grille[l][c].PionCourant == null) {
             return false;
@@ -57,6 +61,7 @@ public class Plateau {
         if (Grille[l][c].PionCourant.CouleurPion == unPion.CouleurPion) {
             return false;
         } else {
+            //Grille[l][c] = null;
             unPion = Grille[l][c].PionCourant;
             return true;
         }
@@ -133,53 +138,8 @@ public class Plateau {
         // ou sont ces éléments quand on appelle cette méthode ? DANS CETTE CLASSE
 
     }
+    
+    // déplacement des cartes dans parties
 
-    int[][] Mante = {{2, 1}, {1, 3}, {3, 3}};
-    Carte CarteMante = new Carte("Mante", "Rouge", Mante);
-
-    int[][] Singe = {{1, 1}, {1, 3}, {3, 1}, {3, 3}};
-    Carte CarteSinge = new Carte("Singe", "Bleu", Singe);
-
-    int[][] Cheval = {{2, 1}, {1, 2}, {2, 3}};
-    Carte CarteCheval = new Carte("Cheval", "Rouge", Cheval);
-
-    int[][] Boeuf = {{2, 1}, {3, 2}, {2, 3}};
-    Carte CarteBoeuf = new Carte("Boeuf", "Bleu", Boeuf);
-
-    int[][] Grue = {{1, 1}, {2, 3}, {3, 1}};
-    Carte CarteGrue = new Carte("Grue", "Bleu", Grue);
-
-    int[][] Sanglier = {{1, 2}, {2, 3}, {3, 2}};
-    Carte CarteSanglier = new Carte("Sanglier", "Rouge", Sanglier);
-
-    int[][] Anguille = {{1, 1}, {1, 3}, {3, 2}};
-    Carte CarteAnguille = new Carte("Anguille", "Bleu", Anguille);
-
-    int[][] Cobra = {{1, 2}, {3, 1}, {3, 3}};
-    Carte CarteCobra = new Carte("Cobra", "Rouge", Cobra);
-
-    int[][] Tigre = {{2, 1}, {2, 4}};
-    Carte CarteTigre = new Carte("Tigre", "Bleu", Tigre);
-
-    int[][] Dragon = {{0, 3}, {1, 1}, {3, 1}, {4, 3}};
-    Carte CarteDragon = new Carte("Dragon", "Rouge", Dragon);
-
-    int[][] Grenouille = {{0, 2}, {1, 3}, {3, 1}};
-    Carte CarteGrenouille = new Carte("Grenouille", "Bleu", Grenouille);
-
-    int[][] Lapin = {{1, 1}, {3, 3}, {4, 2}};
-    Carte CarteLapin = new Carte("Lapin", "Bleu", Lapin);
-
-    int[][] Crabe = {{0, 2}, {2, 3}, {2, 2}};
-    Carte CarteCrabe = new Carte("Crabe", "Bleu", Crabe);
-
-    int[][] Elephant = {{1, 2}, {1, 3}, {3, 2}, {3, 3}};
-    Carte CarteElephant = new Carte("Elephant", "Rouge", Elephant);
-
-    int[][] Oie = {{1, 2}, {1, 3}, {2, 1}, {3, 2}};
-    Carte CarteOie = new Carte("Oie", "Bleu", Oie);
-
-    int[][] Coq = {{1, 1}, {1, 2}, {3, 2}, {3, 3}};
-    Carte CarteCoq = new Carte("Coq", "Rouge", Coq);
 
 }

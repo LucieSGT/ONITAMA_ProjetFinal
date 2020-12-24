@@ -23,16 +23,16 @@ public class Partie {
 void initialiserPartie() {
     
     // vider Plateau
+    // Placer Pions (Rouge en bas/bleu en haut)
     // Entrée des joueurs et affectation dans liste
     // Sélection des 5 cartes déplacements
     // Attribution des couleurs
     // Attribution des cartes
     // Création et attribution CarteTransition (qui commence ?)
-    // Placer Pions (Rouge en bas/bleu en haut)
     // Afficher la grille
     
         PlateauJeu.ViderPlateau(); // initialisation de la grille
-        // BD : corrigé avec un V majuscule
+        // BD : corrigé avec un V majuscule OK
         Scanner sc = new Scanner(System.in);
         System.out.println("Entrez le nom du Joueur 1 : ");
         Joueur Joueur1 = new Joueur(sc.nextLine()); // création des deux objets joueur
@@ -48,7 +48,7 @@ void initialiserPartie() {
         System.out.println(Joueur2.NomJoueur + " possède les jetons de couleur " + Joueur2.CouleurJoueur);
 
         PlateauJeu.AfficherPlateauSurConsole(); // affichage du jeu initialisé sur la console
-        // BD : methode non présente
+        // BD : methode non présente OK
 }
     
 // méthode débuter partie ?
@@ -80,7 +80,7 @@ void AttribuerCartesAuxJoueurs() {
       // affectation de la carte transition à un des joueurs
 }
 
-boolean DeplacerPion(Pion unPion){
+boolean DeplacerPion(Pion unPion){ // à revoir
     // appeler méthode déplacer pion dans plateau
     return true;
 }
@@ -90,12 +90,16 @@ boolean ChoisirCarte(Carte unNomCarte){
     return true;
 }
 
+boolean ChoisirPion(Pion unPion){
+    return true;
+}
+
 boolean Tour() { // équivalent de notre méthode Menu() achevée
         System.out.println("Tour de " + JoueurCourant.NomJoueur);
         return true;
 }
 
-void CouleurSuivante() { // changement de joueur
+void JoueurSuivant() { // changement de joueur
     // BD : joueur suivant
         if (ListeJoueurs[0] == JoueurCourant) {
             JoueurCourant = ListeJoueurs[1];
@@ -117,6 +121,53 @@ Carte EchangeCarte(){
     return uneCarte;
 }
 
+int[][] Mante = {{2, 1}, {1, 3}, {3, 3}};
+    Carte CarteMante = new Carte("Mante", "Rouge", Mante);
+
+    int[][] Singe = {{1, 1}, {1, 3}, {3, 1}, {3, 3}};
+    Carte CarteSinge = new Carte("Singe", "Bleu", Singe);
+
+    int[][] Cheval = {{2, 1}, {1, 2}, {2, 3}};
+    Carte CarteCheval = new Carte("Cheval", "Rouge", Cheval);
+
+    int[][] Boeuf = {{2, 1}, {3, 2}, {2, 3}};
+    Carte CarteBoeuf = new Carte("Boeuf", "Bleu", Boeuf);
+
+    int[][] Grue = {{1, 1}, {2, 3}, {3, 1}};
+    Carte CarteGrue = new Carte("Grue", "Bleu", Grue);
+
+    int[][] Sanglier = {{1, 2}, {2, 3}, {3, 2}};
+    Carte CarteSanglier = new Carte("Sanglier", "Rouge", Sanglier);
+
+    int[][] Anguille = {{1, 1}, {1, 3}, {3, 2}};
+    Carte CarteAnguille = new Carte("Anguille", "Bleu", Anguille);
+
+    int[][] Cobra = {{1, 2}, {3, 1}, {3, 3}};
+    Carte CarteCobra = new Carte("Cobra", "Rouge", Cobra);
+
+    int[][] Tigre = {{2, 1}, {2, 4}};
+    Carte CarteTigre = new Carte("Tigre", "Bleu", Tigre);
+
+    int[][] Dragon = {{0, 3}, {1, 1}, {3, 1}, {4, 3}};
+    Carte CarteDragon = new Carte("Dragon", "Rouge", Dragon);
+
+    int[][] Grenouille = {{0, 2}, {1, 3}, {3, 1}};
+    Carte CarteGrenouille = new Carte("Grenouille", "Bleu", Grenouille);
+
+    int[][] Lapin = {{1, 1}, {3, 3}, {4, 2}};
+    Carte CarteLapin = new Carte("Lapin", "Bleu", Lapin);
+
+    int[][] Crabe = {{0, 2}, {2, 3}, {2, 2}};
+    Carte CarteCrabe = new Carte("Crabe", "Bleu", Crabe);
+
+    int[][] Elephant = {{1, 2}, {1, 3}, {3, 2}, {3, 3}};
+    Carte CarteElephant = new Carte("Elephant", "Rouge", Elephant);
+
+    int[][] Oie = {{1, 2}, {1, 3}, {2, 1}, {3, 2}};
+    Carte CarteOie = new Carte("Oie", "Bleu", Oie);
+
+    int[][] Coq = {{1, 1}, {1, 2}, {3, 2}, {3, 3}};
+    Carte CarteCoq = new Carte("Coq", "Rouge", Coq);
 }
 
 
